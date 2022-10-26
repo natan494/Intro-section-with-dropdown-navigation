@@ -1,0 +1,345 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--almost_white: rgb(243, 236, 236);
+	--medium_gray: rgb(94, 94, 94);
+	--almost_black: hsl(0, 0%, 8%);
+}
+body {
+	background-color: var(--almost_white);
+}
+
+.nav-bar {
+	margin: 3rem;
+	display: flex;
+	justify-content: space-between;
+}
+.nav-bar__features__drop__down {
+	position: relative;
+}
+
+.nav-bar__features__drop__down__links {
+	position: absolute;
+	margin-top: 2rem;
+	right: 10%;
+	width: 160px;
+	height: 200px;
+	border-radius: 15px;
+	display: flex;
+	color: var(--almost_black);
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	flex-direction: column;
+	background-color: white;
+	box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.69);
+	animation-name: test;
+	animation-duration: 1.3s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes test {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.nav-bar__features__drop__down__links div {
+	margin: 0.5rem;
+	margin-top: 1rem;
+}
+.nav-bar__features__drop__down__links div svg {
+	margin-right: 0.5rem;
+}
+.nav-bar__features__drop__down__links div a {
+	margin: 0;
+	font-size: 1.8rem;
+}
+
+.d-none {
+	display: none !important;
+	transition: all 2s;
+}
+.nav-bar__links__container {
+	display: flex;
+	flex: 1 0 auto;
+	margin-left: 5rem;
+}
+.nav-bar__links__container a {
+	text-decoration: none;
+	margin: 3rem;
+	font-size: 2rem;
+	color: var(--medium_gray);
+}
+.nav-bar__login__container a {
+	text-decoration: none;
+	margin: 1rem;
+	font-size: 2rem;
+	color: var(--medium_gray);
+	margin-right: 4rem;
+}
+
+.nav-bar__company__drop__down {
+	position: relative;
+}
+
+.nav-bar__company__drop__down__links a {
+	margin: 0;
+	margin-left: 1.5rem;
+	margin-top: 1rem;
+}
+.nav-bar__links__container a:hover {
+	color: black;
+}
+
+.nav-bar__login__container a:hover {
+	color: black;
+}
+
+#nav-bar__login__register {
+	border: 1px solid var(--almost_black);
+	padding: 1rem 2rem;
+	border-radius: 15px;
+}
+
+.toggler {
+	position: relative;
+}
+
+.flex_cullum {
+	flex-direction: column;
+}
+
+@media (min-width: 870px) {
+	.nav-bar__links__container {
+		display: flex !important;
+	}
+	.nav-bar__company__drop__down__links {
+		position: absolute;
+		margin-top: 2rem;
+		right: -10%;
+		width: 170px;
+		height: 135px;
+		border-radius: 15px;
+		display: flex;
+		color: var(--almost_black);
+		justify-content: center;
+		animation-name: test;
+		animation-duration: 1.3s;
+		animation-timing-function: ease-out;
+
+		font-weight: 600;
+		flex-direction: column;
+		background-color: white;
+		box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.69);
+	}
+	.nav-bar__login__container {
+		display: block !important;
+	}
+	.toggler {
+		display: none;
+	}
+	#mobile-img {
+		display: none;
+	}
+	#desktop-img {
+		width: 40vw;
+	}
+	.header__container {
+		display: flex;
+		margin: 5rem;
+		flex-direction: row-reverse;
+	}
+	.img_container {
+		margin: 4rem;
+	}
+	.header__container__left-side {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		margin-top: 15rem;
+	}
+	.header__container_h1_container h1 {
+		font-size: 7vw;
+	}
+	#header__container_p {
+		font-size: 2vw;
+		margin-top: 3rem;
+	}
+	#btn {
+		padding: 1rem 4rem;
+		background-color: black;
+		color: var(--almost_white);
+		border-radius: 20px;
+		font-size: 2vw;
+		margin-top: 8rem;
+	}
+	.icons {
+		display: flex;
+		margin-top: 10rem;
+	}
+	.icons svg {
+		margin: 0rem 2rem;
+	}
+}
+
+@media (max-width: 863px) {
+	.nav-bar__features__drop__down__links {
+		position: static;
+		transition: all 2s;
+		right: 0%;
+		margin-left: 2rem;
+		border-radius: 15px;
+		display: flex;
+		color: var(--almost_black);
+		justify-content: center;
+		height: 15rem;
+		font-weight: 600;
+		flex-direction: column;
+		animation-name: test;
+		animation-duration: 1.3s;
+		animation-timing-function: ease-out;
+		box-shadow: none;
+	}
+
+	.nav-bar__features__drop__down__links a {
+		font-size: 1.5rem;
+	}
+	.nav-bar__links__container {
+		margin-left: 0;
+		margin-top: 7rem;
+	}
+	.nav-bar__links__container a {
+		font-size: 2rem;
+		font-weight: 300;
+	}
+	.nav-bar__company__drop__down__links {
+		position: static;
+		margin-top: 2rem;
+		right: 0%;
+		margin-left: 4rem;
+		border-radius: 15px;
+		display: flex;
+		color: var(--almost_black);
+		justify-content: center;
+		height: 7rem;
+		font-weight: 600;
+		flex-direction: column;
+		background-color: white;
+		box-shadow: none;
+		animation-name: test;
+		animation-duration: 1.3s;
+		animation-timing-function: ease-out;
+	}
+
+	.nav-bar__about a {
+		display: block;
+	}
+	.toggler {
+		display: block;
+	}
+	.toggler {
+		cursor: pointer;
+	}
+	.toggler__menu {
+		position: absolute;
+		background-color: white;
+		height: 150vh;
+		width: 70vw;
+		right: -100%;
+		top: -100%;
+	}
+	.nav-bar__login__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2rem;
+	}
+	#toggler__close {
+		margin: 2rem;
+		display: flex;
+		margin-left: 85%;
+		justify-content: flex-end;
+	}
+	.nav-bar__company__drop__down {
+		margin-top: 3rem;
+	}
+	img {
+		object-fit: cover;
+		width: 100%;
+	}
+	.header__container {
+		display: flex;
+		flex-direction: column;
+	}
+	.header__container_h1_container {
+		margin-top: 2rem;
+		text-align: center;
+	}
+	.header__container_h1_container h1 {
+		font-size: 11vw;
+	}
+	#header__container_p {
+		text-align: center;
+		font-size: 5vw;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	.header__container__btn {
+		align-self: center;
+		margin-top: 1rem;
+	}
+	#btn {
+		background-color: black;
+		padding: 1rem 2rem;
+		color: var(--almost_white);
+		border-radius: 10px;
+		border: none;
+		margin-top: 2rem;
+		font-size: 6vw;
+	}
+	#desktop-img {
+		display: none;
+	}
+	.header__container__left-side {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.icons {
+		margin-top: 3rem;
+	}
+	.icons svg {
+		margin: 4rem;
+	}
+}
+
+#make {
+	animation-name: makeAni;
+	animation-duration: 3s;
+	position: relative;
+}
+
+@keyframes makeAni {
+	0% {
+		opacity: 0;
+		right: 70px;
+	}
+	100% {
+		opacity: 1;
+		right: 0;
+		transform: translateY(0px);
+	}
+} ;
